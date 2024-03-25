@@ -1,6 +1,9 @@
 import { useState } from "react"
+import {bigImages,SmallImages} from '../const/const'
+import IconClose from "./icons/IconClose"
 
-export default function Placeholder() {
+// eslint-disable-next-line react/prop-types
+export default function Placeholder({setShowPlace}) {
   const [position,setPosition] = useState(1)
 
   const scrollTo = (type) => {
@@ -17,7 +20,6 @@ export default function Placeholder() {
       : setPosition(position - 1)
     }
     gallery.scrollLeft = Array.from(items)[position].offsetLeft
-
   }
   
   const next = ()=> {
@@ -26,25 +28,37 @@ export default function Placeholder() {
   const back = ()=> {
     scrollTo('back')
   }
+
+  const handleClick = () => {
+    setShowPlace(false)
+  }
   return (
     <section className='placeholder__gallery'>
         <div className="close">
-          <button className="btn-close"><img src="/images/icon-close.svg" alt="icon-close" /></button>
+          <button onClick={handleClick} className="btn-close"><IconClose></IconClose></button>
         </div>
             <div className="gallery__p">
               <div className="big__images">
-                <img src="/images/image-product-1.jpg" alt="1" />
-                <img src="/images/image-product-2.jpg" alt="2" />
-                <img src="/images/image-product-3.jpg" alt="3" />
-                <img src="/images/image-product-4.jpg" alt="4" />
+                <img src={bigImages[0]} alt="1" />
+                <img src={bigImages[1]} alt="2" />
+                <img src={bigImages[2]} alt="3" />
+                <img src={bigImages[3]} alt="4" />
               </div>
                 <button onClick={back} className="btn__back btn"><img src="/images/icon-previous.svg" alt="btn-back" /></button>
                 <button onClick={next} className="btn__next btn"><img src="/images/icon-next.svg" alt="btn-next" /></button>
               <div className="previews">
-                <img src="/images/image-product-1-thumbnail.jpg" alt="1" />
-                <img src="/images/image-product-2-thumbnail.jpg" alt="2" />
-                <img src="/images/image-product-3-thumbnail.jpg" alt="3" />
-                <img src="/images/image-product-4-thumbnail.jpg" alt="4" />
+                <div className={`image`}>
+                  <img src={SmallImages[0]} alt="0" />
+                </div>
+                <div className={`image`}>
+                  <img src={SmallImages[1]} alt="1" />
+                  </div>
+                <div className={`image`}>
+                  <img src={SmallImages[2]} alt="2" />
+                  </div>
+                <div className={`image`}>
+                  <img src={SmallImages[3]} alt="3" />
+                  </div>
               </div>
             </div>
     </section>

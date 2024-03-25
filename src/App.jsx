@@ -9,6 +9,7 @@ function App() {
     const getStorage = parseInt(localStorage.getItem('count'))
     const [showCardApp, setShowCard] = useState(false)
     const [count , setCount] = useState( getStorage || 0)
+    const [showPlace, setShowPlace] = useState(false)
 
     let price = 125
 
@@ -27,8 +28,17 @@ function App() {
 
   return (
     <>
-      <Layout showCard={showCardApp} price={price} count={count} setCount={setCount} setShowCard={setShowCard}>
-        <Article setShowCard={setShowCard} count={count} countMinus={countMinus} countPlus={countPlus} price={price}></Article>
+      <Layout showCard={showCardApp} price={price} count={count} setCount={setCount} setShowCard={setShowCard} showPlace={showPlace} setShowPlace={setShowPlace}>
+        <Article 
+        setShowCard={setShowCard} 
+        count={count} 
+        countMinus={countMinus} 
+        countPlus={countPlus} 
+        price={price} 
+        setShowPlace={setShowPlace}
+        showPlace={showPlace}
+        >
+        </Article>
       </Layout>
     </>
       

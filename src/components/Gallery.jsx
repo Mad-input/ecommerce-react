@@ -1,6 +1,7 @@
-export default function Gallery() {
-    const SmallImages = ['/images/image-product-1-thumbnail.jpg','/images/image-product-2-thumbnail.jpg','/images/image-product-3-thumbnail.jpg',"/images/image-product-4-thumbnail.jpg"]
-    const bigImages = [ '/images/image-product-1.jpg','/images/image-product-2.jpg','/images/image-product-3.jpg','/images/image-product-4.jpg' ]
+import {bigImages,SmallImages} from '../const/const'
+
+// eslint-disable-next-line react/prop-types
+export default function Gallery({setShowPlace}) {
     const changeImage = ({target})=> {
         const place = document.querySelector('.section__gallery .placeHolder')
         const bigImage = document.querySelector('.section__gallery .big-image img')
@@ -13,9 +14,13 @@ export default function Gallery() {
         `
     }
 
+    const showPlaceHolder = ()=> {
+        setShowPlace(true)
+    }
+
   return (
     <section className="section__gallery">
-        <div className="big-image">
+        <div onClick={showPlaceHolder} className="big-image">
             <img src="/images/image-product-1.jpg" alt="image-product-Sneakers" id="bigImage"/>
         </div>
         <div className="small-images">
