@@ -265,6 +265,7 @@ article {
           border: none;
           background: none;
           cursor: pointer;
+          font-family: "Kumbh Sans", sans-serif;
           &:hover {
             opacity: 0.5;
           }
@@ -275,6 +276,9 @@ article {
       }
 
       .btn__add-to-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex: 1;
         border-radius: var(--radius);
         padding: var(--pad);
@@ -283,13 +287,11 @@ article {
         color: #fff;
         font-weight: 600;
         font-size: 0.9375rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         gap: 0.625rem;
         cursor: pointer;
         filter: drop-shadow(var(--Orange) 0 0.125rem 0.5rem);
         transition: scale 0.2s, opacity 0.2s;
+        font-family: "Kumbh Sans", sans-serif;
         &:hover {
           scale: 1.01;
           opacity: 0.8;
@@ -548,9 +550,7 @@ article {
       cursor: pointer;
       transition: scale 0.2s;
       outline: none;
-      img {
-        vertical-align: top;
-      }
+      color: #fff;
       &.btn__next {
         right: -1.5625rem;
       }
