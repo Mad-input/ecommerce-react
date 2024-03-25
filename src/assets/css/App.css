@@ -20,7 +20,7 @@
 }
 
 body {
-  background: var(--Light-grayish-blue);
+  background: var(--White);
   font-family: "Kumbh Sans", sans-serif;
   min-height: 100dvh;
   margin: auto;
