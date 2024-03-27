@@ -24,10 +24,10 @@ export default function Gallery({setShowPlace}) {
             <img src="/images/image-product-1.jpg" alt="image-product-Sneakers" id="bigImage"/>
         </div>
         <div className="small-images">
-            <img onMouseEnter={changeImage} id="0"src={SmallImages[0]} alt="product-1"/>
-            <img onMouseEnter={changeImage} id="1"src={SmallImages[1]} alt="product-2"/>
-            <img onMouseEnter={changeImage} id="2"src={SmallImages[2]} alt="product-3"/>
-            <img onMouseEnter={changeImage} id="3"src={SmallImages[3]} alt="product-4"/>
+            <img loading='lazy' onMouseEnter={changeImage} id="0"src={SmallImages[0]} alt="product-1"/>
+            <img loading='lazy' onMouseEnter={changeImage} id="1"src={SmallImages[1]} alt="product-2"/>
+            <img loading='lazy' onMouseEnter={changeImage} id="2"src={SmallImages[2]} alt="product-3"/>
+            <img loading='lazy' onMouseEnter={changeImage} id="3"src={SmallImages[3]} alt="product-4"/>
             <div className="placeHolder"></div>
         </div>
     </section>

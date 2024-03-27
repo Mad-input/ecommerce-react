@@ -21,10 +21,10 @@ export default function GalleryMobile() {
   return (
     <section className='section__gallery_mobile'>
         <div className="gallery">
-            <div className="image"><img src={bigImages[0]} alt="0" /></div>
-            <div className="image"><img src={bigImages[1]} alt="1" /></div>
-            <div className="image"><img src={bigImages[2]} alt="2" /></div>
-            <div className="image"><img src={bigImages[3]} alt="3" /></div>
+            <div className="image"><img loading='lazy' src={bigImages[0]} alt="0" /></div>
+            <div className="image"><img loading='lazy' src={bigImages[1]} alt="1" /></div>
+            <div className="image"><img loading='lazy' src={bigImages[2]} alt="2" /></div>
+            <div className="image"><img loading='lazy' src={bigImages[3]} alt="3" /></div>
         </div>
         <button onClick={next} className="btn"><img src="/images/icon-next.svg" alt="next" /></button>
     </section>
